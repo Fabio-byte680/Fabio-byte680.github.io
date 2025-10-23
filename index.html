@@ -1,53 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículum - Fabio Andres Leaños Rioja</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Currículum — Fabio Andres Leaños Rioja</title>
+<meta name="description" content="Currículum vitae de Tu Nombre">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#0f1724; /* azul muy oscuro */
+--card:#0b1220;
+--muted:#94a3b8;
+--accent:#7c3aed;
+--glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:linear-gradient(180deg,var(--bg),#071026); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+.container{max-width:980px; margin:40px auto; padding:28px;}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:26px; box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+header{display:flex; gap:20px; align-items:center;}
+.avatar{width:112px; height:112px; border-radius:18px; background:var(--glass); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:34px; color:var(--accent);}
+h1{margin:0; font-size:28px;}
+.role{color:var(--muted); margin-top:6px;}
+.top-right{margin-left:auto; text-align:right}
+.contact{color:var(--muted); font-size:14px}
+
+
+main{display:grid; grid-template-columns:1fr 320px; gap:22px; margin-top:20px}
+.section{background:transparent; padding:14px; border-radius:10px}
+.section h2{font-size:16px; margin:0 0 12px 0}
+.about p{color:var(--muted); margin:0}
+
+
+/* Experience, Projects list */
+.item{padding:12px; border-radius:10px; background:rgba(255,255,255,0.02); margin-bottom:12px}
+.item h3{margin:0; font-size:15px}
+.item .meta{color:var(--muted); font-size:13px; margin-top:6px}
+ul.skills{list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:8px; margin:0}
+ul.skills li{background:rgba(255,255,255,0.03); padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted)}
+
+
+/* Sidebar */
+aside .card{padding:16px}
+.progress{height:8px; background:rgba(255,255,255,0.04); border-radius:999px; overflow:hidden}
+.progress > i{display:block; height:100%; background:linear-gradient(90deg,var(--accent),#4f46e5)}
+
+
+footer{margin-top:18px; text-align:center; color:var(--muted); font-size:13px}
+
+
+/* Responsive */
+@media (max-width:880px){
+main{grid-template-columns:1fr;}
+.top-right{margin-left:0; text-align:left}
+header{flex-direction:row}
+}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <div class="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-10">
-    <header class="text-center border-b pb-4 mb-6">
-      <h1 class="text-3xl font-bold">Fabio Andres Leaños Rioja</h1>
-      <p class="text-gray-600">Desarrollador Web | Estudiante de Ingeniería</p>
-      <p class="text-sm text-gray-500 mt-2">📍 Santa Cruz de la Sierra, Bolivia | ✉️ andresleanosrioja@gmail.com | 🌐 github.com/Fabio-byte680</p>
-    </header>
+<body>
+<div class="container">
+<div class="card">
+<header>
+<div class="avatar">TN</div>
+<div>
+<h1>Fabio Andres Leaños Rioja</h1>
+<div class="role">Desarrollador Web • Ingeniero de Software • Productor de soluciones</div>
+<div class="contact" style="margin-top:8px">📍 Santa Cruz de la Sierra, Bolivia · ✉️ <a href="mailto:tu@email.com" style="color:inherit; text-decoration:underline;">tu@email.com</a> · ☎️ +591 7X XXX XXX</div>
+</div>
+<div class="top-right">
+<div style="font-weight:600">Portfolio</div>
+<div style="color:var(--muted); font-size:13px;margin-top:6px"><a href="#" style="color:inherit; text-decoration:underline">github.com/tu-usuario</a></div>
+</div>
+</header>
 
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-2 mb-2">Perfil Profesional</h2>
-      <p>
-        Soy un profesional apasionado por la tecnología y la innovación digital. 
-        Me especializo en el desarrollo de soluciones web modernas, con enfoque en usabilidad, eficiencia y experiencia del usuario.
-      </p>
-    </section>
 
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-2 mb-2">Experiencia</h2>
-      <div>
-        <h3 class="font-semibold">Desarrollador Web - Empresa Intecpro</h3>
-        <p class="text-sm text-gray-500">2022 - Actualidad</p>
-        <ul class="list-disc ml-6">
-          <li>Desarrollo de aplicaciones web responsivas.</li>
-          <li>Resolución de problemas y aprendizaje continuo.</li>
-          <li>Adaptabilidad a nuevas tecnologías.</li>
-          <li>Implementación de APIs y herramientas de automatización.</li>
-        </ul>
-      </div>
-    </section>
+<main>
+<section class="section about">
+<h2>Sobre mí</h2>
+<p>Ingeniero de software con X años de experiencia en desarrollo web (Frontend y Backend). Me apasiona crear productos útiles y accesibles, escribir código limpio y trabajar en equipos ágiles. Busco oportunidades en las que pueda liderar iniciativas y mejorar la experiencia del usuario.</p>
 
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-2 mb-2">Educación</h2>
-      <div>
-        <h3 class="font-semibold">Ingeniería en Sistemas - Universidad Privada Domingo Savio</h3>
-        <p class="text-sm text-gray-500">2021 - Presente</p>
-      </div>
-    </section>
 
-    <section>
-      <h2 class="text-xl font-semibold border-b pb-2 mb-2">Habilidades</h2>
-      <p>HTML, CSS, JavaScript, Python, Git</p>
-    </section>
-  </div>
-</body>
-</html>
+<h2 style="margin-top:18px">Experiencia</h2>
+<article class="item">
+<h3>Empresa Intecpro — Desarrollador Frontend</h3>
+<div class="meta">Mar 2022 — Actual · Santa Cruz, Bolivia</div>
+<p style="color:var(--muted); margin-top:8px;">Construí y mantuve aplicaciones web usando React, Node.js y bases de datos SQL/NoSQL. Implementé pipelines CI/CD y mejoré el rendimiento reduciendo tiempos de carga en 30%.</p>
